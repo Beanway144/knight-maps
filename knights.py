@@ -48,7 +48,7 @@ def possibleKnightSquares(listPixels, m, xjump, yjump):
         squaresOfX = getKnightSquares(p, 1, fib[m]) 
         for x in squaresOfX:
             if (pixels[x] == BGC):
-                pixels[x] = (0, 150 - 150//(DEPTH) * m, 255//(DEPTH) * m) #contrast[m % len(contrast)]
+                pixels[x] = contrast[m % len(contrast)]
                 newSquares.append(x)
     return newSquares
 
